@@ -1,15 +1,42 @@
-.env
 
-# Python
+# ============================================================
+# ASEPRITE MCP - GITIGNORE
+# ============================================================
+
+# Aseprite source code, Skia, dependencies & builds
+/vendor/
+
+# Locally compiled Aseprite application
+/tools/aseprite/
+
+# Python virtual environments
+/.venv/
+venv/
+env/
+ENV/
+
+# Environment variables & local configuration
+.env
+.env.*
+!.env.example
+/.codex/config.toml
+
+# Python caches
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Python build and packaging
 build/
-develop-eggs/
 dist/
+develop-eggs/
 downloads/
 eggs/
 .eggs/
@@ -23,30 +50,40 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
-venv/
-ENV/
-
-# IDE
+# IDE settings
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
+*.code-workspace
 
-# Aseprite files
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+Thumbs.db
+.DS_Store
+
+# Generated artwork (existing ignore policy)
 *.aseprite
 *.ase
 *.png
 *.gif
 *.jpg
+*.jpeg
+*.webp
 
-# README showcase images (everything else in examples/ stays untracked)
-!examples/swordsman/swordsman.png
-!examples/swordsman/swordsman_slash.gif
-!examples/swordsman/swordsman_slash_sheet.png
-!examples/slime/slime.png
-!examples/slime/slime_bounce.gif
-!examples/swordsman/opus_redraw.png
-!examples/swordsman/opus_redraw_slash.gif
-!examples/swordsman_vs_slime/swordsman_vs_slime.gif
-!examples/cosy_room/cosy_room.gif
+# Preserve original repository showcase images
+!/examples/swordsman/swordsman.png
+!/examples/swordsman/swordsman_slash.gif
+!/examples/swordsman/swordsman_slash_sheet.png
+!/examples/slime/slime.png
+!/examples/slime/slime_bounce.gif
+!/examples/swordsman/opus_redraw.png
+!/examples/swordsman/opus_redraw_slash.gif
+!/examples/swordsman_vs_slime/swordsman_vs_slime.gif
+!/examples/cosy_room/cosy_room.gif
+  
