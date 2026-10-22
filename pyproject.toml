@@ -12,5 +12,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "cmake>=3.29,<4",
+    "ninja>=1.13.2",
     "pytest>=9.0.3",
 ]
